@@ -1,6 +1,6 @@
 # Chinese Teacher / 中文老师
 
-一个写中文工作文档的 AI skill。不是"帮你写得更正式"，而是**让文档有判断力、有人味、能推动决策**。
+一个写中文工作文档的 AI skill。不是"帮你写得更正式"，而是**让文档有判断力、有人味、能推动决策**。写文档时自动在开头、关键章节和结尾插入飞书画板做视觉摘要——不靠复杂图表，用简约的形状和文字把关键信息亮出来。
 
 ## 它解决什么问题
 
@@ -45,6 +45,12 @@
 "用精神病风格写这份复盘"
 ```
 
+## 画板：不只有文字
+
+默认会在文档的三个关键位置生成飞书画板——**开头**（封面页）、**关键章节**（核心框架或数据）、**结尾**（结论 + 行动号召）。画板风格跟随你选的文风。生成的是可编辑的飞书原生画板，不是截图，不用打开别的工具就能改。
+
+画板能力来自 zara 的 [beautiful-feishu-whiteboard](https://github.com/zarazhangrui/beautiful-feishu-whiteboard)（24 种配色风格 + 画板硬规则），已经直接内嵌在这个 skill 里了，不需要额外装任何东西。
+
 ## 规则来源
 
 这个 skill 没有凭空编造规则。每条规则下面都有出处：
@@ -62,7 +68,11 @@
 
 ## 前提
 
-通用的 AI agent skill，不绑定特定平台。TRAE CLI、Claude Code、Cursor、Codex 或者其他 agent 工具都可以用。需要配合 `lark-doc` skill 来实际创建和更新飞书文档。
+通用的 AI agent skill，不绑定特定平台。TRAE CLI、Claude Code、Cursor、Codex 或者其他 agent 工具都可以用。需要配合 `lark-doc` skill 来实际创建和更新飞书文档。画板功能需要 `lark-cli` 认证。
+
+## 致敬
+
+画板配色风格和画板生成规则来自 [@zarazhangrui](https://github.com/zarazhangrui) 的 [beautiful-feishu-whiteboard](https://github.com/zarazhangrui/beautiful-feishu-whiteboard)（MIT 许可），已内嵌在 `whiteboard/` 目录中。zara 的 24 种配色风格和飞书画板的硬规则，是这个 skill 画板能力的基石。感谢她的开源。
 
 ## 许可
 

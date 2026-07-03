@@ -1,13 +1,13 @@
 ---
 name: chinese-teacher
-description: "Chinese Teacher / 中文老师：通用的 AI agent 写作风格引擎，用于创建、改写、润色、重组或续写飞书云文档、Docx、Wiki、方案、汇报、纪要、公告、复盘、周报等中文工作文档。提供四种文风（默认/同事/咨询/精神病），规则来自 Google/Microsoft/GitHub 文档风格指南、MBB/四大/HR 咨询机构中文原生报告、以及戴同一个人写作风格。不绑定特定 agent 平台，TRAE CLI、Claude Code、Cursor、Codex 等均可使用。"
+description: "Chinese Teacher / 中文老师：通用的 AI agent 写作风格引擎，用于创建、改写、润色、重组或续写飞书云文档、Docx、Wiki、方案、汇报、纪要、公告、复盘、周报等中文工作文档。提供四种文风（默认/同事/咨询/精神病），规则来自 Google/Microsoft/GitHub 文档风格指南、MBB/四大/HR 咨询机构中文原生报告、以及戴同一个人写作风格。默认在文档开头、关键章节和结尾自动插入飞书画板做视觉摘要。不绑定特定 agent 平台，TRAE CLI、Claude Code、Cursor、Codex 等均可使用。"
 ---
 
 # Chinese Teacher / 中文老师
 
 ## 这个 skill 是什么
 
-一个中文工作文档的**写作风格引擎**。它提供四种文风，从"清晰可执行"到"敢下判断、有数据底气"，覆盖从日常周报到战略方案的各种场景。
+一个中文工作文档的**写作风格引擎**。它提供四种文风，从"清晰可执行"到"敢下判断、有数据底气"，覆盖从日常周报到战略方案的各种场景。写文档时自动在开头、关键章节和结尾插入飞书画板做视觉摘要——不是生硬的逻辑图，是简约的、可编辑的关键信息展示。
 
 它的规则来自三处：公开文档风格指南（Google、Microsoft、GitHub）的提炼、MBB/四大/HR 咨询机构中文原生报告的分析、以及戴同一个人写作风格的总结。它不是一个"写得更正式"的工具——它是一个**让文档有判断力、有人味、能推动决策**的写作系统。
 
@@ -63,16 +63,19 @@ chinese-teacher 提供四种文风，从基线到极端，逐层递进：
 4. **精神病风格** — 人味 × 咨询的极端融合。敢下判断、有数据底气、说话带刺但句句站得住。适合内部战略讨论、复盘。
 
 也可以组合："同事风格 + 咨询风格"或"同事风格 + 精神病风格"。
+
+文档会自动在开头、关键章节和结尾插入飞书画板做视觉摘要。不需要额外指定。画板风格跟随你选的文风。
 ```
 
 如果用户一次就指定了文风，跳过此步骤。
 
-### Step 1-4：判断 → 选结构 → 写句子 → 发布
+### Step 1-5：判断 → 选结构 → 写句子 → 加画板 → 发布
 
 1. 判断文档类型、受众、目标动作。信息不全但能合理假设时继续写，不为小空白打断流程。
 2. 选结构，再写句子。优先使用 [`references/templates.md`](references/templates.md) 的骨架。
 3. 写句子时遵循选定的风格规则。默认风格规则见下文；其他风格规则见对应 reference 文件。
-4. 要实际创建或更新飞书文档时，切到 [`lark-doc`](../lark-doc/SKILL.md) 执行。
+4. **写完后，生成画板。** 读取 [`references/whiteboard-guide.md`](references/whiteboard-guide.md)，根据文风选画板风格，根据文档类型确定三个画板的内容。画板能力和 24 种配色风格已内嵌在本 skill 的 [`whiteboard/`](whiteboard/) 目录中（源自 zara 的 [beautiful-feishu-whiteboard](https://github.com/zarazhangrui/beautiful-feishu-whiteboard)，MIT 许可）。按 `whiteboard/RULES.md` 的硬限制生成 SVG，写入飞书画板。画板生成失败时不阻塞，fallback 为纯文字文档。
+5. 要实际创建或更新飞书文档时，切到 [`lark-doc`](../lark-doc/SKILL.md) 执行，将画板链接嵌入文档对应位置。
 
 ### 改写已有文档时
 
@@ -167,6 +170,8 @@ chinese-teacher 提供四种文风，从基线到极端，逐层递进：
 | [`references/templates.md`](references/templates.md) | 常用文档骨架 | 从零起草、重组结构时 |
 | [`references/rewrite-patterns.md`](references/rewrite-patterns.md) | 常见坏写法与改写模式 | 句子级润色、删空话时 |
 | [`references/sources.md`](references/sources.md) | 规则来源与提炼 rationale | 用户追问"为什么这么写"或处理规则冲突时 |
+| [`references/whiteboard-guide.md`](references/whiteboard-guide.md) | 画板使用指南（文风映射、插入策略、生成流程） | 写文档需要生成画板时 |
+| [`whiteboard/`](whiteboard/) | 24 种画板配色风格 + 画板硬限制（内嵌，源自 zara 的 beautiful-feishu-whiteboard） | 生成画板时 |
 
 **默认不要一次性把全部 references 展开。按当前任务最小化读取。**
 
