@@ -1,0 +1,4 @@
+interface:
+  display_name: "中文老师"
+  short_description: "中文飞书云文档默认文风、结构模板与句子级改写规则集"
+  default_prompt: "Use $chinese-teacher to draft or revise a Chinese Feishu doc in a clear, decision-ready work-document style."
