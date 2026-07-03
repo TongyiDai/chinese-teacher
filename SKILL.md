@@ -1,6 +1,6 @@
 ---
 name: chinese-teacher
-description: "Chinese Teacher / 中文老师：用于创建、改写、润色、重组或续写飞书云文档、Docx、Wiki、方案、汇报、纪要、公告、复盘、周报等中文工作文档。把 GitHub Docs、Google styleguide、Microsoft Style Guide 等公开高质量写作规范压成适合中文工作文档的固定文风，并与 lark-doc 配合执行。"
+description: "Chinese Teacher / 中文老师：通用的 AI agent 写作风格引擎，用于创建、改写、润色、重组或续写飞书云文档、Docx、Wiki、方案、汇报、纪要、公告、复盘、周报等中文工作文档。提供四种文风（默认/同一/咨询/精神病），规则来自 Google/Microsoft/GitHub 文档风格指南、MBB/四大/HR 咨询机构中文原生报告、以及戴同一个人写作风格。不绑定特定 agent 平台，TRAE CLI、Claude Code、Cursor、Codex 等均可使用。"
 ---
 
 # Chinese Teacher / 中文老师
@@ -11,7 +11,7 @@ description: "Chinese Teacher / 中文老师：用于创建、改写、润色、
 
 它的规则来自三处：公开文档风格指南（Google、Microsoft、GitHub）的提炼、MBB/四大/HR 咨询机构中文原生报告的分析、以及戴同一个人写作风格的总结。它不是一个"写得更正式"的工具——它是一个**让文档有判断力、有人味、能推动决策**的写作系统。
 
-这个 skill 不负责飞书文档 API 读写。需要实际创建或更新 Docx/Wiki 时，与 [`lark-doc`](../lark-doc/SKILL.md) 配合使用。
+通用的 AI agent skill，不绑定特定平台。TRAE CLI、Claude Code、Cursor、Codex 等均可使用。需要实际创建或更新 Docx/Wiki 时，与飞书文档 skill（如 `lark-doc`）配合使用。
 
 ## 四种文风
 

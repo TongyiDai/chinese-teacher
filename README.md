@@ -62,7 +62,7 @@
 
 ## 前提
 
-这是给 TRAE CLI 用的 skill。需要配合 `lark-doc` skill 来实际创建和更新飞书文档。
+通用的 AI agent skill，不绑定特定平台。TRAE CLI、Claude Code、Cursor、Codex 或者其他 agent 工具都可以用。需要配合 `lark-doc` skill 来实际创建和更新飞书文档。
 
 ## 许可
 
