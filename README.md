@@ -12,18 +12,8 @@
 
 这个 skill 试图解决这两个问题。它把公开文档风格指南（Google、Microsoft、GitHub）、MBB/四大/HR 咨询机构的中文原生报告、以及我自己的写作习惯，压成了一套可以复用的规则。
 
-## 三张图看懂它怎么工作
-
 <p align="center">
   <img src="assets/boards/write-judgment.svg" alt="先提炼核心判断，再润色工作文档" width="900" />
-</p>
-
-<p align="center">
-  <img src="assets/boards/style-foundation.svg" alt="四种文风共享默认规则这块地基" width="900" />
-</p>
-
-<p align="center">
-  <img src="assets/boards/whiteboard-flow.svg" alt="在开头、关键章节和结尾放置对应画板" width="900" />
 </p>
 
 ## 四种文风
@@ -48,6 +38,10 @@
 
 默认风格是地基。同事风格和咨询风格是两个独立分支。精神病风格是两者的融合——也是最有张力的一个。
 
+<p align="center">
+  <img src="assets/boards/style-foundation.svg" alt="四种文风共享默认规则这块地基" width="900" />
+</p>
+
 ## 怎么用
 
 装好之后，当你让我写文档时，我会先问你用哪种文风。你也可以直接指定：
@@ -64,6 +58,10 @@
 默认会在文档的三个关键位置生成飞书画板——**开头**（封面页）、**关键章节**（核心框架或数据）、**结尾**（结论 + 行动号召）。画板风格跟随你选的文风。生成的是可编辑的飞书原生画板，不是截图，不用打开别的工具就能改。
 
 画板能力来自 zara 的 [beautiful-feishu-whiteboard](https://github.com/zarazhangrui/beautiful-feishu-whiteboard)（24 种配色风格 + 画板硬规则），已经直接内嵌在这个 skill 里了，不需要额外装任何东西。
+
+<p align="center">
+  <img src="assets/boards/whiteboard-flow.svg" alt="在开头、关键章节和结尾放置对应画板" width="900" />
+</p>
 
 ## 规则来源
 
