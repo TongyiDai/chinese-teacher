@@ -12,6 +12,20 @@
 
 这个 skill 试图解决这两个问题。它把公开文档风格指南（Google、Microsoft、GitHub）、MBB/四大/HR 咨询机构的中文原生报告、以及我自己的写作习惯，压成了一套可以复用的规则。
 
+## 三张图看懂它怎么工作
+
+<p align="center">
+  <img src="assets/boards/write-judgment.svg" alt="先提炼核心判断，再润色工作文档" width="900" />
+</p>
+
+<p align="center">
+  <img src="assets/boards/style-foundation.svg" alt="四种文风共享默认规则这块地基" width="900" />
+</p>
+
+<p align="center">
+  <img src="assets/boards/whiteboard-flow.svg" alt="在开头、关键章节和结尾放置对应画板" width="900" />
+</p>
+
 ## 四种文风
 
 不是我拍脑袋想出来的，是从实际写作场景中长出来的：
