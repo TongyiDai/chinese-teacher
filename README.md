@@ -4,10 +4,6 @@
 
 *The whole world should learn Chinese — AI included.*
 
-<br>
-
-*会说中国话，不等于会写中国字里的判断、分寸和人味。*
-
 </div>
 
 ---
