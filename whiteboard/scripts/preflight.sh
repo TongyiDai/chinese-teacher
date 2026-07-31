@@ -17,7 +17,7 @@ fi
 # lark-cli  (npm: @larksuite/cli)  — auth + writing to Feishu
 if command -v lark-cli >/dev/null 2>&1; then
   echo "  ✓ lark-cli ($(lark-cli --version 2>/dev/null | head -1))"
-  if lark-cli auth status >/dev/null 2>&1; then
+  if lark-cli auth status --json --verify >/dev/null 2>&1; then
     echo "  ✓ lark-cli appears authenticated"
   else
     echo "  ! lark-cli may not be authenticated. Run:"

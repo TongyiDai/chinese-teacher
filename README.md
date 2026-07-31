@@ -54,6 +54,26 @@
 
 ## 怎么用
 
+安装后先运行：
+
+```bash
+scripts/doctor.sh --json
+```
+
+它会区分本地写作、飞书写入和可编辑画板能力。没有飞书认证时仍可生成本地文稿和 SVG；写入飞书前需要核对目标文档、账号/租户，并在写入后读回验证。
+
+### Agent 使用说明
+
+| 项目 | 约定 |
+|---|---|
+| 首步 | `scripts/doctor.sh --json` |
+| 本地能力 | 中文文稿、风格改写、SVG 画板生成 |
+| 可选能力 | `lark-cli`、`lark-doc`、可编辑飞书画板 |
+| 无认证时 | 保留本地文稿和 SVG，状态为 `generated` |
+| 飞书写入后 | 读回目标文档结构和画板前后文本，状态才是 `verified` |
+
+详细运行和 Lark 约定见 [`references/runtime.md`](references/runtime.md) 和 [`references/lark-cli.md`](references/lark-cli.md)。
+
 装好之后，当你让我写文档时，我会先问你用哪种文风。你也可以直接指定：
 
 ```
