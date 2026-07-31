@@ -5,6 +5,15 @@ description: "Chinese Teacher / 中文老师：通用的 AI agent 写作风格�
 
 # Chinese Teacher / 中文老师
 
+## 首步：检查可用能力
+
+运行 `scripts/doctor.sh --json`。需要飞书交付时，再运行
+`lark-cli auth status --json --verify`，并读取 [运行与能力契约](references/runtime.md)
+及 [Lark CLI 集成契约](references/lark-cli.md)。
+
+没有飞书或白板能力时，完成本地文稿和 SVG 产物，明确报告停在
+`generated`；不要把本地生成当成远端写入。
+
 ## 这个 skill 是什么
 
 一个中文工作文档的**写作风格引擎**。它提供四种文风，从"清晰可执行"到"敢下判断、有数据底气"，覆盖从日常周报到战略方案的各种场景。写文档时自动在开头、关键章节和结尾插入飞书画板做视觉摘要——不是生硬的逻辑图，是简约的、可编辑的关键信息展示。
