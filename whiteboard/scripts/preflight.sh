@@ -17,8 +17,20 @@ fi
 # lark-cli  (npm: @larksuite/cli)  — auth + writing to Feishu
 if command -v lark-cli >/dev/null 2>&1; then
   echo "  ✓ lark-cli ($(lark-cli --version 2>/dev/null | head -1))"
-  if lark-cli auth status >/dev/null 2>&1; then
-    echo "  ✓ lark-cli appears authenticated"
+  auth_out="$(LARKSUITE_CLI_NO_UPDATE_NOTIFIER=1 LARKSUITE_CLI_NO_SKILLS_NOTIFIER=1 lark-cli auth status --json --verify 2>&1 || true)"
+  if printf '%s' "$auth_out" | python3 -c 'import json,sys; p=json.load(sys.stdin); raise SystemExit(0 if p.get("identity") == "user" and p.get("verified") is True else 1)' 2>/dev/null; then
+    echo "  ✓ lark-cli verified a user identity"
+  elif printf '%s' "$auth_out" | grep -Eqi 'unknown command|no such command|unrecognized command'; then
+    contact_out="$(LARKSUITE_CLI_NO_UPDATE_NOTIFIER=1 LARKSUITE_CLI_NO_SKILLS_NOTIFIER=1 lark-cli contact +get-user --as user --json 2>/dev/null || true)"
+    if printf '%s' "$contact_out" | python3 -c 'import json,sys; p=json.load(sys.stdin); u=(p.get("data") or {}).get("user") or {}; raise SystemExit(0 if p.get("ok") is True and p.get("identity") == "user" and bool(u.get("open_id") or u.get("openId")) else 1)' 2>/dev/null; then
+      echo "  ✓ current user resolved through read-only contact probe"
+    else
+      echo "  ! lark-cli is installed, but no compatible user identity probe succeeded. Run:"
+      echo "        lark-cli config init     # first-time setup, scan the QR"
+      echo "        lark-cli auth login      # authorize your Feishu/Lark account"
+    fi
+  elif [ -n "$auth_out" ]; then
+    echo "  ! lark-cli authentication check failed. Fix the current profile before writing whiteboards."
   else
     echo "  ! lark-cli may not be authenticated. Run:"
     echo "        lark-cli config init     # first-time setup, scan the QR"
