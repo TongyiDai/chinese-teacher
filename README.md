@@ -1,11 +1,5 @@
 > “The limits of my language mean the limits of my world.” — Ludwig Wittgenstein, *Tractatus Logico-Philosophicus*
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Agent%20Skill-agentskills.io-2F6BFF" alt="Agent Skill">
-  <img src="https://img.shields.io/badge/license-MIT-3fb950" alt="License MIT">
-  <img src="https://img.shields.io/badge/works%20with-Codex%20|%20Claude%20|%20Cursor%20|%20TRAE-555" alt="Works with major agents">
-</p>
-
 <div align="center">
 
 ### **全世界都该学中国话，AI 也不例外。**
@@ -17,6 +11,12 @@
 ---
 
 # Chinese Teacher / 中文老师
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Agent%20Skill-agentskills.io-2F6BFF" alt="Agent Skill">
+  <img src="https://img.shields.io/badge/license-MIT-3fb950" alt="License MIT">
+  <img src="https://img.shields.io/badge/works%20with-Codex%20|%20Claude%20|%20Cursor%20|%20TRAE-555" alt="Works with major agents">
+</p>
 
 一个写中文工作文档的 AI skill。不是"帮你写得更正式"，而是**让文档有判断力、有人味、能推动决策**。写文档时自动在开头、关键章节和结尾插入飞书画板做视觉摘要——不靠复杂图表，用简约的形状和文字把关键信息亮出来。
 
