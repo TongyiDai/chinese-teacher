@@ -1,5 +1,11 @@
 > “The limits of my language mean the limits of my world.” — Ludwig Wittgenstein, *Tractatus Logico-Philosophicus*
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Agent%20Skill-agentskills.io-2F6BFF" alt="Agent Skill">
+  <img src="https://img.shields.io/badge/license-MIT-3fb950" alt="License MIT">
+  <img src="https://img.shields.io/badge/works%20with-Codex%20|%20Claude%20|%20Cursor%20|%20TRAE-555" alt="Works with major agents">
+</p>
+
 <div align="center">
 
 ### **全世界都该学中国话，AI 也不例外。**
