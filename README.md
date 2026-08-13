@@ -116,4 +116,4 @@ Agent 先确认文档类型、读者、目标动作和指定文风，再读取�
 
 ## 许可
 
-MIT
+本项目以 MIT 许可开源，详见 [LICENSE](LICENSE)。其中 `whiteboard/` 目录内嵌的画板能力来自 [@zarazhangrui](https://github.com/zarazhangrui) 的 [beautiful-feishu-whiteboard](https://github.com/zarazhangrui/beautiful-feishu-whiteboard)，同为 MIT 许可，其许可证保留在 `whiteboard/LICENSE`。
