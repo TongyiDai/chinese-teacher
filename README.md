@@ -47,7 +47,7 @@ Agent 先确认文档类型、读者、目标动作和指定文风，再读取�
 这个 skill 试图解决这两个问题。它把公开文档风格指南（Google、Microsoft、GitHub）、MBB/四大/HR 咨询机构的中文原生报告、以及我自己的写作习惯，压成了一套可以复用的规则。
 
 <p align="center">
-  <img src="assets/boards/write-judgment.svg" alt="先提炼核心判断，再润色工作文档" width="900" />
+  <img src="assets/boards/write-judgment.svg?v=2" alt="先提炼核心判断，再润色工作文档" width="900" />
 </p>
 
 ## 四种文风
