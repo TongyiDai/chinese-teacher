@@ -1,0 +1,27 @@
+name: Bug 报告 / Bug report
+description: 运行出错，或行为与预期不符
+labels: [bug]
+body:
+  - type: dropdown
+    id: agent
+    attributes:
+      label: 在哪个 Agent 上发生的？
+      options: [Codex, TRAE CLI, Claude Code, Cursor, 其他 / 多个]
+    validations: {required: true}
+  - type: textarea
+    id: what
+    attributes:
+      label: 发生了什么？
+      description: 期望行为 vs 实际行为
+    validations: {required: true}
+  - type: textarea
+    id: repro
+    attributes:
+      label: 复现步骤
+      placeholder: "1. …\n2. …\n3. 出错"
+    validations: {required: true}
+  - type: textarea
+    id: env
+    attributes:
+      label: 环境
+      placeholder: OS、语言版本、使用方式（skill/CLI/MCP）

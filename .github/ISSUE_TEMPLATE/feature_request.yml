@@ -1,0 +1,13 @@
+name: 想法 / 新场景 · Feature request
+description: 一个新场景或对现有能力的改进
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 你想解决的问题是什么？
+      description: 先讲场景，再讲方案。
+    validations: {required: true}
+  - type: textarea
+    id: proposal
+    attributes: {label: 你设想的方案}
